@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doeAlert()
+        {
+            var hetelement=document.getElementById("invoerveld");
+            if(hetelement.value=="hallo")
+            {
+                alert("Welkom");
+            }
+            if(hetelement.value=="doei")
+            {
+                alert("de groeten");
+            }
+        }
+    </script>
+</head>
+<body>
+    Dit is <B>Miniopdracht 1</B>
+    <input id="invoerveld">
+    <input type="button" value="Klik hier" onclick=doeAlert()>
+</body>
+</html>

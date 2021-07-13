@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        function checke()
+        {
+            var hetelement=document.getElementById("invoerveld").value
+            var letter=document.getElementById("invoerveld2").value
+
+            if(letter.length>1)
+            {
+                alert("letter is te lang");
+            }
+            var u=0;
+            for(var i=0;i<hetelement.length;i++)
+            {
+                if(hetelement.charAt(i)==letter)
+                {
+                    u++;
+                }
+            }
+            alert("Er is "+u+" keer de letter "+letter+" in je woord.");
+        }
+    </script>
+    
+</head>
+<body>
+    <div>
+        Je woord: <input id="invoerveld">
+    </div>
+    <div>
+        De letter: <input id="invoerveld2">
+    </div>
+    <div>
+        <input type="button" value="Zoek de e!" onclick=checke()>
+    </div>
+</body>
+</html>

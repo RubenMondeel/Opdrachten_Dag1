@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var mijnarray=[0,0,0,0]
+        var mydict={"A":0,"B":1,"C":2,"D":3}
+        function klik(mijnletter)
+        {
+
+            var div = document.getElementById("mijndiv");
+            var toevoegtekst="U heeft op knop "+mijnletter+" gedrukt</div><div>";
+            if(mijnarray[mydict[mijnletter]])
+            {
+                alert("U heeft al een keer op knop "+mijnletter+" geklikt. Deze is al "+mijnarray[mydict[mijnletter]]+" keer hiervoor ingeklikt.");
+            }
+            mijnarray[mydict[mijnletter]]++;
+            
+            div.innerHTML += toevoegtekst;
+        }
+
+
+    </script>
+</head>
+<body>
+    <div>
+        <input id="buttonA" type="button" value="Knop A" onclick="klik('A')">
+        <input id="buttonB" type="button" value="Knop B" onclick="klik('B')">
+        <input id="buttonC" type="button" value="Knop C" onclick="klik('C')">
+        <input id="buttonD" type="button" value="Knop D" onclick="klik('D')">
+    </div>
+    <div id="mijndiv"></div>
+</body>
+</html>
